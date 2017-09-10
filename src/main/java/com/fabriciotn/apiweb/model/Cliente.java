@@ -3,6 +3,8 @@ package com.fabriciotn.apiweb.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Cliente {
@@ -11,6 +13,10 @@ public class Cliente {
 	@GeneratedValue
 	private Integer id;
 	private String nome;
+	private String email;
+	@JoinColumn
+	@ManyToOne
+	private Estado estado;
 	
 	public Integer getId() {
 		return id;
@@ -24,6 +30,16 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
 }
