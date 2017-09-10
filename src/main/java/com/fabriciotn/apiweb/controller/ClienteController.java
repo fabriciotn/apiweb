@@ -36,6 +36,12 @@ public class ClienteController {
 		return new ResponseEntity<>(todosClientes, HttpStatus.OK);
 	}
 	
+	@RequestMapping(method=RequestMethod.GET, value= "/clientes/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Cliente> buscarPorId(@PathVariable Integer id){
+		Cliente cliente = clienteService.buscarPorId(id);
+		return new ResponseEntity<>(cliente, HttpStatus.OK);
+	}
+	
 	@RequestMapping(method=RequestMethod.DELETE, value="/clientes/{id}")
 	public ResponseEntity<Cliente> exluirCliente(@PathVariable Integer id){
 		Cliente cliente = clienteService.buscarPorId(id);
