@@ -16,6 +16,7 @@ import com.fabriciotn.apiweb.model.Cliente;
 import com.fabriciotn.apiweb.service.ClienteService;
 
 @RestController
+@RequestMapping("/admin")
 public class ClienteController {
 
 	@Autowired
