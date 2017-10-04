@@ -58,6 +58,10 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.6.0</version>
 		</dependency>
+		<dependency>
+			  <groupId>org.hibernate</groupId>
+			  <artifactId>hibernate-envers</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
